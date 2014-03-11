@@ -115,7 +115,7 @@ tf::StampedTransform markerToStampedTransform(aruco::Marker m) {
   // Name and timestamp
   char tf_name[10] = "";
   sprintf(tf_name,"marker%d",m.id);
-  return tf::StampedTransform(transform, ros::Time::now(), "map", tf_name);
+  return tf::StampedTransform(transform, ros::Time::now(), "world", tf_name);
 }
 
 // cameraInfoCb takes a sensor_msgs::CameraInfo message, and 
